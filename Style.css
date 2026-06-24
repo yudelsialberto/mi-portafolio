@@ -1,0 +1,389 @@
+/* ==========================================================================
+   1. RESET Y CONFIGURACIÓN GENERAL (Sutil y Limpio)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+/* Líneas divisorias estilizadas */
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: #801420; /* Detalle Rojo Vino */
+    border: none;
+    margin: 15px auto 30px auto;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO (NAVBAR)
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #140406;
+}
+
+header .logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Botón de Contacto en el menú */
+.btn-nav {
+    border: 1px solid #5c0d16;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: #5c0d16;
+    border-color: #801420;
+}
+
+/* ==========================================================================
+   3. SECCIÓN HERO (Presentación de Impacto)
+   ========================================================================== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 8%;
+    min-height: 85vh;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.3rem;
+    color: #801420; /* Identidad en Rojo Vino */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero-content .tagline {
+    font-size: 1.05rem;
+    color: #a0a0a0;
+    margin-bottom: 30px;
+}
+
+/* Botón Principal */
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #5c0d16, #36050b);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid #70111c;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(92, 13, 22, 0.2);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #801420, #5c0d16);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(128, 20, 32, 0.4);
+}
+
+/* Imagen de Perfil Estilizada */
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #5c0d16;
+    box-shadow: 0 0 25px rgba(92, 13, 22, 0.15);
+}
+
+/* ==========================================================================
+   4. SECCIÓN SOBRE MÍ
+   ========================================================================== */
+.about {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #050505;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #b5b5b5;
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   5. SECCIÓN ESTUDIOS & HABILIDADES (Grid Adaptable)
+   ========================================================================== */
+.education-skills {
+    padding: 80px 8%;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-box {
+    background-color: #080808;
+    border: 1px solid #140406;
+    border-radius: 12px;
+    padding: 35px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-box:hover {
+    border-color: #5c0d16;
+    transform: translateY(-3px);
+}
+
+.card-box h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.card-box h3 .material-symbols-outlined {
+    color: #801420;
+}
+
+.card-box ul {
+    list-style: none;
+}
+
+.card-box ul li {
+    margin-bottom: 20px;
+    color: #b5b5b5;
+}
+
+.card-box ul li strong {
+    color: #ffffff;
+    font-size: 1.05rem;
+}
+
+/* Etiquetas de Habilidades (Tags Modernas) */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-tags span {
+    background-color: #120204;
+    color: #ffa6b0;
+    border: 1px solid #42060c;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   6. SECCIÓN PROYECTOS
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 80px 8%;
+    background-color: #050505;
+}
+
+.project-card {
+    background-color: #0a0a0a;
+    border: 1px solid #140406;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #5c0d16;
+}
+
+.project-info {
+    padding: 30px;
+}
+
+.project-info h4 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    color: #959595;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   7. SECCIÓN CONTACTO Y REDES
+   ========================================================================== */
+.contact {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.contact p {
+    color: #a5a5a5;
+    margin-bottom: 30px;
+}
+
+/* Caja contenedora para las Redes Sociales */
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: #858585;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #801420;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   8. PIE DE PÁGINA (FOOTER - REQUISITO DE LA PRÁCTICA)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 35px 0;
+    border-top: 1px solid #140406;
+}
+
+footer p {
+    color: #555555;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   9. ANIMACIONES Y ADAPTABILIDAD (RESPONSIVE DESIGN)
+   ========================================================================== */
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para pantallas medianas y móviles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+    
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 5%;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .education-skills, .projects-grid, .about, .contact {
+        padding: 60px 5%;
+    }
+}
